@@ -1,0 +1,197 @@
+{
+  "schema_version": "1.0",
+  "generated_on": "2025-12-24",
+  "module": "tools.ai_introspect_tools",
+  "notes": [
+    "This registry is machine-readable guidance for tool selection.",
+    "If a tool is missing in your build, update ai_introspect or apply the relevant patch."
+  ],
+  "tools": [
+    {
+      "name": "append_log_entry",
+      "status": "stable",
+      "signature": "append_log_entry(text, *, role, turn_id, tags=None, cache_root=None)",
+      "summary": ""
+    },
+    {
+      "name": "bootstrap_from_zips",
+      "status": "stable",
+      "signature": "bootstrap_from_zips(ai_introspect_zip, repo_zip, *, work_dir=None, update_fts=True)",
+      "summary": "Extract ai_introspect+repo zips, install toolbelt, rebuild index."
+    },
+    {
+      "name": "build_file_hash_index",
+      "status": "stable",
+      "signature": "build_file_hash_index(root_dir='.', *, cache_root=None)",
+      "summary": ""
+    },
+    {
+      "name": "build_python_symbol_index",
+      "status": "stable",
+      "signature": "build_python_symbol_index(path, *, cache_root=None, encoding='utf-8', include_calls=True)",
+      "summary": ""
+    },
+    {
+      "name": "build_regex_index",
+      "status": "stable",
+      "signature": "build_regex_index(path, pattern, *, lines=3, direction='both', flags=re.MULTILINE, encoding='utf-8', cache_root=None, pattern_name=None)",
+      "summary": ""
+    },
+    {
+      "name": "callees",
+      "status": "stable",
+      "signature": "callees(source, *, repo_root, limit=50, db_path=None)",
+      "summary": "Find call sites within a given source symbol."
+    },
+    {
+      "name": "callers",
+      "status": "stable",
+      "signature": "callers(target, *, repo_root, limit=50, db_path=None)",
+      "summary": "Find call sites calling a target."
+    },
+    {
+      "name": "doctor",
+      "status": "stable",
+      "signature": "doctor(*, repo_root, db_path=None)",
+      "summary": "Detailed DB health snapshot + refs distribution."
+    },
+    {
+      "name": "impact",
+      "status": "stable",
+      "signature": "impact(target, *, repo_root, kind=None, limit=50, db_path=None)",
+      "summary": "Blast radius summary by file for a target."
+    },
+    {
+      "name": "iter_lines_with_numbers",
+      "status": "stable",
+      "signature": "iter_lines_with_numbers(lines, start=1)",
+      "summary": ""
+    },
+    {
+      "name": "list_modified_since_last_index",
+      "status": "stable",
+      "signature": "list_modified_since_last_index(root_dir='.', *, cache_root=None)",
+      "summary": ""
+    },
+    {
+      "name": "nav",
+      "status": "stable",
+      "signature": "nav(query, *, repo_root, limit=20, db_path=None, explain=False, highlight=False)",
+      "summary": "Search symbols/paths/snippets/refs with optional FTS and explainability."
+    },
+    {
+      "name": "nav_explain",
+      "status": "stable",
+      "signature": "nav_explain(res, max_matches=10, max_lines=40)",
+      "summary": ""
+    },
+    {
+      "name": "nav_status",
+      "status": "stable",
+      "signature": "nav_status(*, repo_root, db_path=None)",
+      "summary": "Quick DB schema + table counts + FTS enabled."
+    },
+    {
+      "name": "preflight_and_package",
+      "status": "stable",
+      "signature": "preflight_and_package(repo_root, *, targets=None, use_modified_since_index=True, zip_name='update.zip', update_sqlite_index=True, db_path=None)",
+      "summary": "Preflight + optional SQLite refresh + patch packaging."
+    },
+    {
+      "name": "print_doctor",
+      "status": "stable",
+      "signature": "print_doctor(info, max_lines=40)",
+      "summary": ""
+    },
+    {
+      "name": "print_nav_explain",
+      "status": "stable",
+      "signature": "print_nav_explain(res, max_matches=10, max_lines=40)",
+      "summary": ""
+    },
+    {
+      "name": "print_python_symbols",
+      "status": "stable",
+      "signature": "print_python_symbols(path, *, show_imports=True, show_functions=True, show_decorators=True, show_calls=False, min_call_count=1, encoding='utf-8', max_width=120)",
+      "summary": ""
+    },
+    {
+      "name": "print_regex_context",
+      "status": "stable",
+      "signature": "print_regex_context(path, pattern, *, lines=3, direction='both', flags=re.MULTILINE, encoding='utf-8', max_width=120)",
+      "summary": ""
+    },
+    {
+      "name": "print_regex_function",
+      "status": "stable",
+      "signature": "print_regex_function(path, pattern, *, flags=re.MULTILINE, chunk_size=40, encoding='utf-8')",
+      "summary": ""
+    },
+    {
+      "name": "print_symbol_dependencies",
+      "status": "stable",
+      "signature": "print_symbol_dependencies(symbol, *, direction='both', max_depth=3, cache_root=None)",
+      "summary": ""
+    },
+    {
+      "name": "read_lines",
+      "status": "stable",
+      "signature": "read_lines(path, encoding='utf-8')",
+      "summary": ""
+    },
+    {
+      "name": "record_run_summary",
+      "status": "stable",
+      "signature": "record_run_summary(summary, *, run_id, cache_root=None)",
+      "summary": ""
+    },
+    {
+      "name": "refs",
+      "status": "stable",
+      "signature": "refs(query, *, repo_root, kind=None, limit=50, db_path=None)",
+      "summary": "Query refs graph (call/import/string/config_key)."
+    },
+    {
+      "name": "regex_context",
+      "status": "stable",
+      "signature": "regex_context(path, pattern, *, lines=3, direction='both', flags=re.MULTILINE, encoding='utf-8')",
+      "summary": ""
+    },
+    {
+      "name": "register_artifact",
+      "status": "stable",
+      "signature": "register_artifact(rel_path, artifact_type, *, source_path=None, tags=None, cache_root=None)",
+      "summary": ""
+    },
+    {
+      "name": "scan_symbol_dependencies",
+      "status": "stable",
+      "signature": "scan_symbol_dependencies(symbol, *, direction='both', max_depth=3, cache_root=None)",
+      "summary": ""
+    },
+    {
+      "name": "search_artifacts",
+      "status": "stable",
+      "signature": "search_artifacts(*, artifact_type=None, source_contains=None, tag_equals=None, latest_only=False, cache_root=None)",
+      "summary": ""
+    },
+    {
+      "name": "search_logs",
+      "status": "stable",
+      "signature": "search_logs(pattern, *, roles=None, tags=None, max_hits=20, cache_root=None)",
+      "summary": ""
+    },
+    {
+      "name": "show_match",
+      "status": "stable",
+      "signature": "show_match(match, *, repo_root, db_path=None, max_lines=40)",
+      "summary": "Show bounded context for a match (snippet preferred)."
+    },
+    {
+      "name": "wash_repo",
+      "status": "optional_extension",
+      "signature": "wash_repo(*args, **kwargs)",
+      "summary": ""
+    }
+  ]
+}
